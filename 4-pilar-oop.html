@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4 Pilar OOP</title>
+</head>
+<body>
+    <script>
+        //ENCAPSULATION : kondisi di mana attribute atau method di dalam class dibungkus dan bersifat privat.
+        class Mail{
+  constructor(author) {
+    this._contacts = [];
+    this.from = author;
+  }
+ 
+  sendMessage = function(msg, to) {
+    console.log('you send:', msg, 'to', to, 'from', this.from);
+    this._contacts.push(to);
+  }
+ 
+  showAllContacts() {
+    return this._contacts;
+  }
+}
+
+    //ABSTRACTION : penerapan enkapsulasi dimana sebuah objek hanya menunjukkan operasinya secara high-level.
+    
+    //INHERITANCE : 
+    // cara 1: menggunakan keyword `extends` jika menggunakan statement `class`
+class ChildClassName extends ParentClassName{}
+ 
+ 
+ // cara 2: menggunakan `prototype` jika menggunakan statement `function` / `class`
+ ChildClassName.prototype = new ParentClassName()
+    //POLYMORPHISM : banyak bentuk. dapat memiliki bentuk atau implementasi yang berbeda-beda pada satu metode yg sama.
+    </script>
+</body>
+</html>
